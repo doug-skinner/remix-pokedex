@@ -4,9 +4,23 @@
   "description": "My remix pokedex",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "remix build",
+    "dev": "remix dev",
+    "start": "NODE_ENV=production remix-serve ./build",
+    "typecheck": "tsc"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@remix-run/react": "^1.13.0",
+    "@remix-run/serve": "^1.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.13.0",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^4.9.5"
+  }
 }
