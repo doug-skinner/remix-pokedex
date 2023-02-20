@@ -1,16 +1,26 @@
-import { Scripts } from '@remix-run/react'
-import { useState } from 'react'
+import type { LinksFunction } from '@remix-run/node'
+import { Links, Outlet, Scripts } from '@remix-run/react'
+
+import globalStylesUrl from './styles/global.css'
+
+export const links: LinksFunction = () => {
+    return [
+        {
+            rel: 'stylesheet',
+            href: globalStylesUrl,
+        },
+    ]
+}
 
 export default function App() {
-    const [count, setCount] = useState(0)
     return (
         <html>
             <head>
-                <title>My First Remix App</title>
+                <title>Remix Pokedex</title>
             </head>
             <body>
-                <p>This is a remix app. Hooray!</p>
-                <button onClick={() => setCount((c) => c + 1)}>{count}</button>
+                <Links />
+                <Outlet />
                 <Scripts />
             </body>
         </html>

@@ -1,1 +1,3 @@
-module.exports = {}
+module.exports = {
+    serverDependenciesToBundle: ['pokedex-promise-v2'],
+}
